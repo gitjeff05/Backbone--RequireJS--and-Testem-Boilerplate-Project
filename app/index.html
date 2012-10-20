@@ -16,7 +16,14 @@
   <script src="scripts/vendor/require.js"></script>
   <script>
     require(['scripts/models/person'], function(Person) {
-      console.log(new Person);
+
+      // You can delete this.
+      var person = new Person({
+        last: 'Way',
+        age: 27
+      });
+      console.log(person.yob());
+
     });
   </script>
 
