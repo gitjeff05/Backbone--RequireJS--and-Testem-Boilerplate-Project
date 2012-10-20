@@ -1,0 +1,20 @@
+define(['backbone'], function() {
+	'use strict';
+
+	return Backbone.Model.extend({
+		validate: function(attrs) {
+			if ( attrs.last === '' ) {
+				return 'A name is required.';
+			}
+		},
+
+		fullName: function() {
+			return this.get('first') + ' ' + this.get('last');
+		},
+
+		yob: function() {
+			return (new Date).getFullYear() - this.get('age');
+		}
+	});
+
+});
