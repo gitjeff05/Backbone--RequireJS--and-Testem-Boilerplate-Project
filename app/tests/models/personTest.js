@@ -1,4 +1,4 @@
-require(['scripts/models/person'], function(Person) {
+define(['scripts/models/person'], function(Person) {
 
 	describe('A Person Model', function() {
 		beforeEach(function() {

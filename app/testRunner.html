@@ -15,14 +15,15 @@
   <script>
   require(
     [
-      'tests/models/personTest.js'
+      'tests/models/personTest.js',
+      'jquery'
     ],
-    function(Person) {
+    function(Person,$) {
       var jasmineEnv = jasmine.getEnv();
       jasmineEnv.addReporter(new jasmine.HtmlReporter)
-      window.onload = function() {
+      $(function() {
         jasmineEnv.execute();
-      };
+      });
     }
   );
   </script>
